@@ -1,0 +1,18 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: oauth2clientcredentials
+spec:
+  type: middleware.http.oauth2clientcredentials
+  version: v1
+  metadata:
+  - name: clientId
+    value: "<YOUR_CLIENT_ID>"
+  - name: clientSecret
+    value: "<YOUR_CLIENT_SECRET>"
+  - name: scopes
+    value: "resource"
+  - name: tokenURL
+    value: "<YOUR_APIGEE_TOKEN_URL>"
+  - name: headerName
+    value: "Authorization"
